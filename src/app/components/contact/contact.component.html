@@ -1,0 +1,91 @@
+<div class="container">
+  <form class="form" (ngSubmit)="onSubmit($event)" [formGroup]="user">
+    <label>
+      <span>Name</span
+      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" placeholder="Your Name" formControlName="name" />
+      <div *ngIf="user.controls['name'].invalid" class="alert">
+          Please enter username
+      </div>
+    </label>
+    <br />
+    <label>
+      <span>Last Name</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input
+        type="text"
+        placeholder="Your Last Name"
+        formControlName="lastName"
+      />
+      <div *ngIf="user.controls['lastName'].invalid" class="alert">
+          Please enter user last name
+      </div>
+    </label>
+    <br />
+    <label>
+      <span>Is Militar</span
+      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <select name="isMilitar" id="Militar" formControlName="isMilitar">
+        <option value="Yes">Yes</option>
+        <option selected value="No">No</option>
+      </select>
+      <div *ngIf="user.controls['isMilitar'].invalid" class="alert">
+          Please select militar state
+      </div>
+    </label>
+    <br />
+    <label>
+      <span>Email address</span>&nbsp;&nbsp;
+      <input type="email" placeholder="email" (ngModelChange)="nameCh()"  formControlName="email"  email/>
+      <div *ngIf="user.controls['email'].invalid" class="alert">
+          Please enter a email or valid email
+      </div>
+    </label>
+    <br />
+    <label>
+      <span>password</span
+      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input
+        type="password"
+        placeholder="password"
+        formControlName="password"
+      />
+      <div *ngIf="user.controls['password'].invalid" class="alert">
+          Please enter a password
+      </div>
+    </label>
+    <br />
+    <label>
+      <span>phone</span
+      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="number" placeholder="phone" formControlName="phone" />
+      <div *ngIf="user.controls['phone'].invalid" class="alert">
+          Please enter a phone
+      </div>
+    </label>
+    <br />
+    <label>
+      <span>Type Doc</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <select name="typeDoc" id="typeDoc" formControlName="typeDoc">
+        <option value="cc">CC</option>
+        <option selected value="ti">TI</option>
+      </select>
+      <div *ngIf="user.controls['typeDoc'].invalid" class="alert">
+          Please select a document type
+      </div>
+    </label>
+    <br />
+    <label>
+      <span>Document</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input
+        type="number"
+        placeholder="Document Number"
+        formControlName="document"
+      />
+      <div *ngIf="user.controls['document'].invalid" class="alert">
+          Please enter a document
+      </div>
+    </label>
+    <br />
+    <button type="submit">Primary</button>
+  </form>
+</div>

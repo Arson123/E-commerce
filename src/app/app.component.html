@@ -1,0 +1,8 @@
+<app-nav (showList)="viewContact($event)"></app-nav><hr/>
+<app-products *ngIf="showImg"></app-products>
+<app-contact *ngIf="!showImg"></app-contact>
+
+<!-- <p><input type="text" [(ngModel)]="imgParent"/></p>
+<button (click)="toogleImg()">Toggle </button>
+<p>{{showImg}}</p>
+<app-img *ngIf="showImg" (loaded)="onLoaded($event)" [img]="imgParent"></app-img><hr/> -->

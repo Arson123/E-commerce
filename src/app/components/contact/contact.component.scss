@@ -1,0 +1,41 @@
+.container {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 520px;
+  height: 36rem;
+  background: white;
+  box-shadow: 5px 5px 15px rgb(220, 240, 190);
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+}
+
+.alert{
+  color: red;
+}
+
+input {
+  border-radius: 6px;
+  width: 60%;
+  height: 1.5rem;
+  border-color: whitesmoke;
+}
+
+select {
+  border-radius: 6px;
+  width: 60%;
+  height: 1.5rem;
+  border-color: whitesmoke;
+}
+
+button {
+  height: 2rem;
+  border-radius: 6px;
+  color: white;
+  background-color: rgb(100, 212, 100);
+}
